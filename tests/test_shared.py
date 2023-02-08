@@ -8,7 +8,7 @@ test_clean = [
 pytest.param(1234, "1234", marks=pytest.mark.xfail)
 ]
 
-@pytest.mark.parametrize('sample, expected', test1)
+@pytest.mark.parametrize('sample, expected', test_clean)
 def test_clean_string(sample, expected): 
     #test_str1 = " This! is      a ,test string  "
     #test_str2 = 1234 #expected to fail
@@ -21,7 +21,7 @@ test_compress = [
 pytest.param(1234, "1234", marks=pytest.mark.xfail)
 ]
 
-@pytest.mark.parametrize('sample, expected', test1)
+@pytest.mark.parametrize('sample, expected', test_compress)
 def test_space_compress(sample, expected): 
     #test_str1 = " This! is      a ,test string  "
     #test_str2 = 1234 #expected to fail

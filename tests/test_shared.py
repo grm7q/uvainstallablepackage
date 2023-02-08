@@ -29,6 +29,6 @@ def test_space_compress(sample, expected):
 def test_space_compress(): 
     assert sh.space_compress(45678) == "45678"
 
-@pytest.mark.skipif(sys.platform == 'darwin', reason="Platform-specific test")
+@pytest.mark.skipif(sys.platform == 'darwin', reason="Test only for non-Macs")
 def test_mac():
     assert sh.space_compress(45678) == "45678"

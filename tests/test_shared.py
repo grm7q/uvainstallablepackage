@@ -5,25 +5,21 @@ import pytest
 
 test_clean = [
     (" This! is      a ,test string  ", 'This is a test string'),
-pytest.param(1234, "1234", marks=pytest.mark.xfail)
+pytest.param(1234, "1234", marks=pytest.mark.xfail)  #expected to fail
 ]
 
 @pytest.mark.parametrize('sample, expected', test_clean)
 def test_clean_string(sample, expected): 
-    #test_str1 = " This! is      a ,test string  "
-    #test_str2 = 1234 #expected to fail
     assert sh.clean_string(sample) == expected
     assert sh.clean_string(sample) == expected
 
     
 test_compress = [
-    (" This! is      a ,test string  ", 'This! is a ,test string'),
-pytest.param(1234, "1234", marks=pytest.mark.xfail)
+    (" This! is      a ,test string  ", "This! is a ,test string"),
+pytest.param(1234, "1234", marks=pytest.mark.xfail)  #expected to fail
 ]
 
 @pytest.mark.parametrize('sample, expected', test_compress)
 def test_space_compress(sample, expected): 
-    #test_str1 = " This! is      a ,test string  "
-    #test_str2 = 1234 #expected to fail
-    assert sh.clean_string(sample) == expected
-    assert sh.clean_string(sample) == expected
+    assert sh.space_compress(sample) == expected
+    assert sh.space_compress(sample) == expected

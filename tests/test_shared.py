@@ -24,12 +24,7 @@ def test_space_compress(sample, expected):
     assert sh.space_compress(sample) == expected
     assert sh.space_compress(sample) == expected
     
-    
-test_compress2 = [
-    (45678, "45678") #expected to fail, mark as skip
-]
 
-@pytest.mark.skip('sample, expected', test_compress2)
-def test_space_compress(sample, expected): 
-    assert sh.space_compress(sample) == expected
-    assert sh.space_compress(sample) == expected
+@pytest.mark.skip(reason = "can't test this")
+def test_space_compress(): 
+    assert sh.space_compress(45678) == "45678"

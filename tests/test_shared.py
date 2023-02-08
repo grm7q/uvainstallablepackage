@@ -31,4 +31,5 @@ def test_space_compress():
 
 @pytest.mark.skipif(sys.platform == 'darwin', reason="Test only for non-Macs")
 def test_mac():
+    print("My platform is", sys.platform)
     assert sh.space_compress(45678) == "1234" #writing a failing test that will skip only on my platform

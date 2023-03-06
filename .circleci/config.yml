@@ -45,7 +45,7 @@ jobs:
           name: run tests
           command: |
             . env/bin/activate
-            pytest -vvx tests
+            pytest -vv tests
  
        - name: Test with pytest
         run: |

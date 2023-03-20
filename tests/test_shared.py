@@ -35,7 +35,7 @@ def test_circleci_change():
     assert True, "Just a test to force a change"
 
 #adding an additional test for checking circleci
-def add_numbers(number1, number2)
+def add_numbers(number1, number2):
     number3 = number1+number2
     return number3
 
